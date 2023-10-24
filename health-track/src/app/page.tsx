@@ -1,5 +1,5 @@
 "use client";
-import { BellIcon, BloodIcon, BloodRate, HeartRateIcon, LogoIcon, SearchIcon } from '@/components/icons';
+import { BellIcon, BloodIcon, BloodRate, DownGreenIcon, HeartRateIcon, LogoIcon, MeasurementIcon, SearchIcon, UpRedIcon } from '@/components/icons';
 import Image from 'next/image';
 import { AreaChart, YAxis, CartesianAxis, Tooltip, Area, CartesianGrid, XAxis } from 'recharts';
 const data = [
@@ -90,6 +90,7 @@ export default function Home() {
     <main className="flex w-full flex-row overflow-hidden">
       <div className="w-[150px] bg-white h-screen z-0 shadow-2xl flex gap-y-4 flex-col items-center p-10">
         <LogoIcon />
+        <h1 className="text-xs font-semibold">HealthTrackPro Web App </h1>
       </div>
       <div className="w-full flex flex-row gap-4 h-[100vh] flex bg-[#FFFCF8]">
         <div className="w-[60%] h-full flex flex-col gap-3 items-center p-8">
@@ -199,7 +200,75 @@ export default function Home() {
             </AreaChart>
           </div>
         </div>
-        <div className="w-[40%] rounded-l-xl h-full bg-[#303030]"></div>
+        <div className="w-[40%] text-white rounded-l-xl h-full bg-[#303030] p-4 w-full flex flex-col gap-3">
+          <div className="flex flex-row w-full justify-between items-center">
+            <h1 className="text-sm font-medium">BMI Calculator</h1>
+            <select className="p-2 border border-[#CACACA] rounded-md bg-transparent text-xs border border border-[#E1E1E1] rounded-md">
+              <option value="lastweek">Last Week</option>
+              <option value="two-weeks" className="text-black">Last 2 weeks</option>
+              <option value="month" className="text-black">Last month</option>
+              <option value="six-months" className="text-black">Last 6 months</option>
+              <option value="year" className="text-black">Last year</option>
+            </select>
+          </div>
+          <div className="flex flex-row w-full gap-4 items-center">
+            <div className="w-[40%] flex flex-col justify-center gap-3">
+              <div className="flex flex-col gap-1 bg-[#F8DEBD] rounded-md p-3">
+                <div className="self-center">
+                  <MeasurementIcon />
+                </div>
+                <div className="flex text-[#272927] flex-row justify-around items-center">
+                  <h1 className="font-medium text-xs">Height</h1>
+                  <h1 className="font-medium text-xs">170cm</h1>
+                </div>
+              </div>
+              <div className="flex flex-col gap-1 bg-[#D0FBFF] rounded-md p-3">
+                <div className="self-center">
+                  <MeasurementIcon />
+                </div>
+                <div className="flex text-[#272927] flex-row justify-around items-center">
+                  <h1 className="font-medium text-xs">Weight</h1>
+                  <h1 className="font-medium text-xs">72kg</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="border border-[#4F4E4E]"></div>
+          <div className="flex flex-row h-full justify-between gap-6 w-full p-4">
+            <div className="h-full flex flex-col gap-3 items-center">
+              <div className="flex flex-col gap-2 justify-center">
+                <h1 className="text-sm">Body Measurements</h1>
+                <p className="text-[#CACACA] text-xs">Last checked 2 Days Ago</p>
+                <div className="p-1 rounded-md bg-[#5E5E5E] text-white text-center font-light text-[10px]">Inverted Triangle Body shape</div>
+              </div>
+              <div className="bg-white text-[#5F5F5F] px-6 py-3 flex flex-col justify-center items-center rounded-md">
+                <h1 className="text-xs">Chest (in)</h1>
+                <div className="flex flex-row items-center gap-3">
+                  <h1 className="text-lg text-black">44.5</h1>
+                  <UpRedIcon />
+                </div>
+              </div>
+              <div className="bg-white text-[#5F5F5F] px-8 py-3 flex flex-col justify-center items-center rounded-md">
+                <h1 className="text-xs">Waist (in)</h1>
+                <div className="flex flex-row items-center gap-3">
+                  <h1 className="text-lg text-black">34</h1>
+                  <DownGreenIcon />
+                </div>
+              </div>
+              <div className="bg-white text-[#5F5F5F] px-6 py-3 flex flex-col justify-center items-center rounded-md">
+                <h1 className="text-xs">Hip (in)</h1>
+                <div className="flex flex-row items-center gap-3">
+                  <h1 className="text-lg text-black">42.5</h1>
+                  <DownGreenIcon />
+                </div>
+              </div>  
+            </div>
+            <div className="h-full flex flex-row mx-auto relative">
+              <Image src={"/man.png"} width={115} height={110} alt="Man" />
+              <Image src={"/circles.png"} width={200} height={80} className="w-full translate-y-20 absolute"  alt="circles" />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   )

@@ -65,3 +65,49 @@ export const LogoIcon = ({ size }: { size?: number }) => (
         </svg>
     </div>
  );
+
+ export const MeasurementIcon = ({ size }: { size?: number }) => (
+    <div style={{ width: size ?? 20 }}>
+       <svg xmlns="http://www.w3.org/2000/svg" width="80" height="20" viewBox="0 0 80 20" fill="none">
+<rect width="1.63271" height="9.09091" rx="0.816355" fill="#282828" fill-opacity="0.28"/>
+<rect x="9.78906" width="1.63271" height="9.09091" rx="0.816355" fill="#282828" fill-opacity="0.4"/>
+<rect x="19.5938" width="1.63271" height="9.09091" rx="0.816355" fill="#282828" fill-opacity="0.7"/>
+<rect x="29.3828" width="1.63271" height="20" rx="0.816355" fill="#D16564"/>
+<rect x="39.1875" width="1.63271" height="9.09091" rx="0.816355" fill="#282828"/>
+<rect x="48.9844" width="1.63271" height="9.09091" rx="0.816355" fill="#282828"/>
+<rect x="58.7734" width="1.63271" height="9.09091" rx="0.816355" fill="#282828"/>
+<rect x="68.5781" width="1.63271" height="9.09091" rx="0.816355" fill="#282828" fill-opacity="0.6"/>
+<rect x="78.3672" width="1.63271" height="9.09091" rx="0.816355" fill="#282828" fill-opacity="0.3"/>
+</svg>
+    </div>
+ );
+
+ export const UpRedIcon = ({ size }: { size?: number }) => (
+    <div style={{ width: size ?? 20 }}>
+       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+<g clip-path="url(#clip0_1_412)">
+<path d="M9.74756 5.871V15H8.24756V5.871L4.22456 9.894L3.16406 8.8335L8.99756 3L14.8311 8.8335L13.7706 9.894L9.74756 5.871Z" fill="#E95D5C"/>
+</g>
+<defs>
+<clipPath id="clip0_1_412">
+<rect width="18" height="18" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+    </div>
+ );
+
+ export const DownGreenIcon = ({ size }: { size?: number }) => (
+    <div style={{ width: size ?? 20 }}>
+       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+<g clip-path="url(#clip0_1_419)">
+<path d="M9.74756 12.129L13.7706 8.106L14.8311 9.1665L8.99756 15L3.16406 9.1665L4.22456 8.106L8.24756 12.129V3H9.74756V12.129Z" fill="#90DF9E"/>
+</g>
+<defs>
+<clipPath id="clip0_1_419">
+<rect width="18" height="18" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+    </div>
+ );
