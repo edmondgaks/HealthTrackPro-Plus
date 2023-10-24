@@ -1,5 +1,5 @@
 "use client";
-import { BellIcon, LogoIcon, SearchIcon } from '@/components/icons';
+import { BellIcon, BloodIcon, BloodRate, HeartRateIcon, LogoIcon, SearchIcon } from '@/components/icons';
 import Image from 'next/image';
 import { AreaChart, YAxis, CartesianAxis, Tooltip, Area, CartesianGrid, XAxis } from 'recharts';
 
@@ -70,8 +70,40 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="w-full flex flex-row gap-4 justify-between items-center">
+            <div className="flex w-[30%] w-full flex-col gap-3 justify-center bg-white rounded-md shadow-md border border-[#E8E7E7] p-4">
+              <div className="flex flex-row gap-4 justify-between items-center">
+                <BloodIcon />
+                <h1 className="text-xs font-semibold">Blood Sugar</h1>
+              </div>
+              <div className="flex flex-col justify-center">
+                <div className="text-xl">80 <span className="text-xs text-[#818181] font-light">mg/dl</span></div>
+                <div className="p-1 bg-[#F8DEBD] rounded-md font-semibold w-[30%] text-[10px]">Normal</div>
+              </div>
+            </div>
+            <div className="flex w-[30%] w-full flex-col gap-3 justify-center bg-white rounded-md shadow-md border border-[#E8E7E7] p-4">
+              <div className="flex flex-row gap-4 justify-between items-center">
+                <HeartRateIcon />
+                <h1 className="text-xs font-semibold">Heart Rate</h1>
+              </div>
+              <div className="flex flex-col justify-center">
+                <div className="text-xl">98 <span className="text-xs text-[#818181] font-light">bpm</span></div>
+                <div className="p-1 bg-[#FBF0F3] rounded-md font-semibold w-[30%] text-[10px]">Normal</div>
+              </div>
+            </div>
+            <div className="flex w-[30%] w-full flex-col gap-3 justify-center bg-white rounded-md shadow-md border border-[#E8E7E7] p-4">
+              <div className="flex flex-row gap-4 justify-between items-center">
+                <BloodRate />
+                <h1 className="text-xs font-semibold">Blood Pressure</h1>
+              </div>
+              <div className="flex flex-col justify-center">
+                <div className="text-xl">102 <span className="text-xs text-[#818181] font-light">/72 mmhg</span></div>
+                <div className="p-1 bg-[#D0FBFF] rounded-md font-semibold w-[30%] text-[10px]">Normal</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="w-[40%] rounded-xl h-full bg-[#303030]"></div>
+        <div className="w-[40%] rounded-l-xl h-full bg-[#303030]"></div>
       </div>
     </main>
   )
