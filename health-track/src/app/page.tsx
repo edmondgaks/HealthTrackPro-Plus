@@ -1,4 +1,5 @@
 "use client";
+import { BellIcon, LogoIcon, SearchIcon } from '@/components/icons';
 import Image from 'next/image';
 import { AreaChart, YAxis, CartesianAxis, Tooltip, Area, CartesianGrid, XAxis } from 'recharts';
 
@@ -49,29 +50,29 @@ const data = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-10 justify-center p-12">
-      <div className="text-xl font-semibold">Health Track pro by Edmond Gaks</div>
-      <p>Here is how your vitals are going</p>
-                                  
-<AreaChart width={730} height={250} data={data}
-  margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-  <defs>
-    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
-      <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
-    </linearGradient>
-    <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
-      <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
-    </linearGradient>
-  </defs>
-  <XAxis dataKey="name" />
-  <YAxis />
-  <CartesianGrid strokeDasharray="3 3" />
-  <Tooltip />
-  <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
-  <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
-</AreaChart>
+    <main className="flex w-full flex-row overflow-hidden">
+      <div className="w-[150px] bg-white h-screen z-0 shadow-2xl flex gap-y-4 flex-col items-center p-10">
+        <LogoIcon />
+      </div>
+      <div className="w-full flex flex-row gap-4 h-[100vh] flex bg-[#FFFCF8]">
+        <div className="w-[60%] h-full flex flex-col gap-6 items-center p-10">
+          <div className="flex flex-row w-full justify-between items-center">
+            <div className="flex flex-col justify-center gap-1">
+              <h1 className="text-sm font-semibold">Health Overview</h1>
+              <p className="text-xs font-light text-[#6A6969]">August 12, 2021</p>
+            </div>
+            <div className="flex flex-row items-center gap-1">
+              <div className="p-2 border border-[#E8E7E7] bg-white shadow-md rounded-md">
+                <SearchIcon />
+              </div>
+              <div className="p-2 border border-[#E8E7E7] mx-auto bg-white shadow-md rounded-md">
+                <BellIcon />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="w-[40%] rounded-xl h-full bg-[#303030]"></div>
+      </div>
     </main>
   )
 }
