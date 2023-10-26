@@ -88,9 +88,23 @@ const data1 = [
 export default function Home() {
   return (
     <main className="flex w-full flex-row overflow-hidden">
-      <div className="w-[150px] bg-white h-screen z-0 shadow-2xl flex gap-y-4 flex-col items-center p-10">
-        <LogoIcon />
-        <h1 className="text-xs font-semibold">HealthTrackPro Web App </h1>
+      <div className="w-[150px] bg-white h-screen z-0 shadow-2xl flex gap-y-4 flex-col justify-around items-center p-10">
+        <div className="flex flex-col gap-1 justify-center">
+          <LogoIcon />
+          <h1 className="text-xs font-semibold">HealthTrackPro Web App</h1>
+        </div>
+        <div className="flex flex-col items-center w-full -translate-x-6">
+          <BloodIcon />
+          <h1 className="text-xs self-end font-semibold">80 <span className="text-[9px] text-[#818181] font-light">mg/dl</span></h1> 
+        </div>
+        <div className="flex flex-col items-center w-full -translate-x-6">
+          <HeartRateIcon />
+          <h1 className="text-xs self-end font-semibold">98 <span className="text-[9px] text-[#818181] font-light">bpm</span></h1> 
+        </div>
+        <div className="flex flex-col items-center w-full -translate-x-6">
+          <BloodRate />
+          <h1 className="text-xs  w-full font-semibold">102 <span className="text-[9px] text-[#818181] font-light">/72mmhg</span></h1> 
+        </div>
       </div>
       <div className="w-full flex flex-row gap-4 h-[100vh] flex bg-[#FFFCF8]">
         <div className="w-[60%] h-full flex flex-col gap-3 items-center p-8">
